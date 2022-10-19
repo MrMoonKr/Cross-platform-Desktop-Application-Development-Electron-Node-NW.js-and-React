@@ -1,0 +1,31 @@
+{
+  "name": "cross-platform-desktop-application-development-electron-node-nw.js-and-react",
+  "version": "1.0.0",
+  "description": "This is the code repository for [Cross-platform Desktop Application Development: Electron, Node, NW.js, and React](https://www.packtpub.com/web-development/cross-platform-desktop-application-development-electron-node-nwjs-and-react?utm_source=github&utm_medium=repository&utm_campaign=9781788295697), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.\r ## About the Book\r Building and maintaining cross-platform desktop applications with native languages isn’t a trivial task. Since it’s hard to simulate on a foreign platform, packaging and distribution can be quite platform-specific and testing cross-platform apps is pretty complicated.In such scenarios, web technologies such as HTML5 and JavaScript can be your lifesaver. HTML5 desktop applications can be distributed across different platforms (Window, MacOS, and Linux) without any modifications to the code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrMoonKr/Cross-platform-Desktop-Application-Development-Electron-Node-NW.js-and-React.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrMoonKr/Cross-platform-Desktop-Application-Development-Electron-Node-NW.js-and-React/issues"
+  },
+  "homepage": "https://github.com/MrMoonKr/Cross-platform-Desktop-Application-Development-Electron-Node-NW.js-and-React#readme",
+  "devDependencies": {
+    "fs-jetpack": "^5.0.0",
+    "mock-fs": "^5.1.4"
+  },
+  "dependencies": {
+    "@types/nw.js": "^0.13.16",
+    "electron": "^21.1.1",
+    "filesize": "^10.0.5",
+    "nw": "^0.69.1",
+    "osenv": "^0.1.5"
+  }
+}

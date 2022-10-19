@@ -1,6 +1,7 @@
 const fs = require( "fs" ),
       { join, parse } = require( "path" ),
       EventEmitter = require( "events" );
+const osenv = require('osenv');
 
 /**
  * Class providing access to file system
@@ -14,7 +15,8 @@ class DirService extends EventEmitter {
    */
   constructor( dir = null ){
     super();
-    this.dir = dir || nw.App.argv[ 0 ] || process.cwd();
+    //this.dir = dir || nw.App.argv[ 0 ] || process.cwd();
+    this.dir = dir || osenv.home();
   }
 
   /**
