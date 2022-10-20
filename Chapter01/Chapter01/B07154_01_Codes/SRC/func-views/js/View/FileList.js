@@ -1,4 +1,4 @@
-const filesize = require( "filesize" );
+const filesize = require('file-size');
 
 /**
  * View class representing File List
@@ -35,9 +35,13 @@ class FileListView {
         <span class="file-list__li__time">Modified</span>
       </li>`;
     collection.forEach(( fInfo ) => {
+
+      //let size = fInfo.stats.size;
+      let size = filesize( fInfo.stats.size ).human('si');
+
       this.el.insertAdjacentHTML( "beforeend", `<li class="file-list__li" data-file="${fInfo.fileName}">
         <span class="file-list__li__name">${fInfo.fileName}</span>
-        <span class="file-list__li__size">${filesize(fInfo.stats.size)}</span>
+        <span class="file-list__li__size">${size}</span>
         <span class="file-list__li__time">${FileListView.formatTime( fInfo.stats.mtime )}</span>
       </li>` );
     });
