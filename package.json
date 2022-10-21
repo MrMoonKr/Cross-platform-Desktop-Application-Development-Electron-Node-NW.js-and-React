@@ -24,7 +24,6 @@
   "dependencies": {
     "@types/nw.js": "^0.13.16",
     "electron": "^21.1.1",
-    "file-size": "^1.0.0",
     "nw": "^0.69.1",
     "osenv": "^0.1.5"
   }

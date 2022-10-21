@@ -1,4 +1,56 @@
-const filesize = require('file-size');
+//const filesize = require('file-size');
+
+const JEDEC = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
+
+/**
+ * Format a number (bytes) to a displayable file size.
+ * Simplified version of https://github.com/avoidwork/filesize.js
+ * @param {number} input 
+ */
+const filesize = (input) => {
+	if (isNaN(input))
+		return input;
+
+	input = Number(input);
+	const isNegative = input < 0;
+	const result = [];
+
+	// Flipping a negative number to determine the size.
+	if (isNegative)
+		input = -input;
+
+	// Determining the exponent.
+	let exponent = Math.floor(Math.log(input) / Math.log(1024));
+	if (exponent < 0)
+		exponent = 0;
+
+	// Exceeding supported length, time to reduce & multiply.
+	if (exponent > 8)
+		exponent = 8;
+
+	// Zero is now a special case because bytes divide by 1.
+	if (input === 0) {
+		result[0] = 0;
+		result[1] = JEDEC[exponent];
+	} else {
+		const val = input / (Math.pow(2, exponent * 10));
+
+		result[0] = Number(val.toFixed(exponent > 0 ? 2 : 0));
+
+		if (result[0] === 1024 && exponent < 8) {
+			result[0] = 1;
+			exponent++;
+		}
+
+		result[1] = JEDEC[exponent];
+	}
+
+	// Decorating a 'diff'.
+	if (isNegative)
+		result[0] = -result[0];
+	
+	return result.join(" ");
+};
 
 /**
  * View class representing File List
@@ -37,7 +89,8 @@ class FileListView {
     collection.forEach(( fInfo ) => {
 
       //let size = fInfo.stats.size;
-      let size = filesize( fInfo.stats.size ).human('si');
+      //let size = filesize( fInfo.stats.size ).human('si');
+      let size = filesize( fInfo.stats.size );
 
       this.el.insertAdjacentHTML( "beforeend", `<li class="file-list__li" data-file="${fInfo.fileName}">
         <span class="file-list__li__name">${fInfo.fileName}</span>
