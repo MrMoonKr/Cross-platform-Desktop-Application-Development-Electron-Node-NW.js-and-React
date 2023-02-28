@@ -1,3 +1,6 @@
+
+
+
 # Cross-platform Desktop Application Development: Electron, Node, NW.js, and React
 This is the code repository for [Cross-platform Desktop Application Development: Electron, Node, NW.js, and React](https://www.packtpub.com/web-development/cross-platform-desktop-application-development-electron-node-nwjs-and-react?utm_source=github&utm_medium=repository&utm_campaign=9781788295697), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.
 ## About the Book
@@ -39,3 +42,7 @@ following software:
 * [Xamarin 4.x Cross-Platform Application Development - Third Edition](https://www.packtpub.com/application-development/xamarin-4x-cross-platform-application-development-third-edition?utm_source=github&utm_medium=repository&utm_campaign=9781786465412)
 
 * [C# 7 and .NET Core: Modern Cross-Platform Development - Second Edition](https://www.packtpub.com/application-development/c-7-and-net-core-modern-cross-platform-development-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781787129559)
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781788295697">https://packt.link/free-ebook/9781788295697 </a> </p>
