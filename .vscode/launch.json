@@ -6,10 +6,18 @@
     "configurations": [
         {
             "type": "nwjs",
+            "request": "attach",
+            "name": "Attach to NWjs",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}/Chapter00",
+            "reloadAfterAttached": true
+        },
+        {
+            "type": "nwjs",
             "request": "launch",
             "name": "Debug-NWjs-index.html",
             "nwjsVersion": "0.69.1",
-            "webRoot": "${fileDirname}/",
+            "webRoot": "${fileDirname}",
             "reloadAfterAttached": true
         }
     ]
